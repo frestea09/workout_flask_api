@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block head %}
+    <title>Post Kondisi</title>
+{% endblock %}
+{% block body%}
+    <h3>Post Kondisi</h3>
+    {% for post in posts %}
+        {% if post.nim %}
+            <p>{{post.nim}}</p>
+        {% else %}
+            <p>By : N/A</p>
+        {% endif %}
+    {% endfor %}
+{% endblock%}
